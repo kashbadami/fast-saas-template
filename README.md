@@ -76,6 +76,7 @@ Building a SaaS product is risky. You could spend months perfecting features onl
 
 ### 🎨 UI/UX Excellence
 - **Beautiful components** with shadcn/ui
+- **Premium UI blocks** from [shadcnblocks.com](https://www.shadcnblocks.com) (💰 Paid - worth every penny!)
 - **Dark mode** support
 - **Responsive design** that works everywhere
 - **Accessibility** first approach
@@ -116,6 +117,7 @@ Your app is now running at [http://localhost:3000](http://localhost:3000) 🎉
 
 - **Framework**: [Next.js 15](https://nextjs.org) (App Router)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com) + [shadcn/ui](https://ui.shadcn.com)
+- **UI Components**: Premium blocks from [shadcnblocks](https://www.shadcnblocks.com) 💰
 - **Database**: [PostgreSQL](https://postgresql.org) + [Prisma](https://prisma.io)
 - **Authentication**: [NextAuth.js v5](https://authjs.dev)
 - **API**: [tRPC](https://trpc.io) for type-safe APIs
@@ -123,6 +125,8 @@ Your app is now running at [http://localhost:3000](http://localhost:3000) 🎉
 - **Storage**: [AWS S3](https://aws.amazon.com/s3) (with local dev support)
 - **Payments**: [Stripe](https://stripe.com) (ready to integrate)
 - **Deployment**: [Vercel](https://vercel.com) (or any Node.js host)
+
+> **Note on UI Components**: This template uses premium UI blocks from [shadcnblocks.com](https://www.shadcnblocks.com). While the core shadcn/ui components are free and open source, shadcnblocks provides professionally designed, production-ready component blocks that require a paid subscription. The blocks used in this template have been customized and integrated - you'll need your own shadcnblocks subscription if you want to access their full library of components.
 
 ## 📚 Documentation
 
@@ -239,6 +243,10 @@ Built with amazing open source projects:
 - [Tailwind CSS](https://tailwindcss.com) by Tailwind Labs
 - [Prisma](https://prisma.io) by Prisma Labs
 - [tRPC](https://trpc.io) by @alexdotjs
+
+Premium UI components from:
+
+- [shadcnblocks](https://www.shadcnblocks.com) - Beautiful, production-ready components (💰 Paid subscription required for full access)
 
 ---
 
