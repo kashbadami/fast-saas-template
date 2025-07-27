@@ -58,8 +58,7 @@ const Features = () => {
           <Carousel className="w-full">
             <CarouselContent className="-ml-4">
               {features.items.map((item, idx) => {
-                // @ts-ignore - Dynamic icon lookup
-                const Icon = Icons[item.icon];
+                const Icon = Icons[item.icon as keyof typeof Icons] as React.ComponentType<{ className?: string; strokeWidth?: number }>;
                 return (
                   <CarouselItem key={idx} className="pl-4 basis-[85%] sm:basis-1/2 md:basis-1/3">
                     <div className="h-full border border-border rounded-lg overflow-hidden transition-colors duration-300 hover:bg-muted/50">
@@ -128,8 +127,7 @@ const Features = () => {
             <Carousel className="w-full">
               <CarouselContent className="-ml-4">
                 {features.items.map((item, idx) => {
-                  // @ts-ignore - Dynamic icon lookup
-                  const Icon = Icons[item.icon];
+                  const Icon = Icons[item.icon as keyof typeof Icons] as React.ComponentType<{ className?: string; strokeWidth?: number }>;
                   return (
                     <CarouselItem key={idx} className="pl-4 basis-full md:basis-1/2">
                       <div className="h-full border border-border rounded-lg overflow-hidden transition-colors duration-300 hover:bg-muted/50">

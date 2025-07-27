@@ -10,7 +10,7 @@ export interface FileMetadata {
   url?: string;
   uploadedAt: Date;
   userId?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export interface UploadOptions {
@@ -32,7 +32,7 @@ export interface UploadOptions {
   /**
    * Additional metadata to store
    */
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
   
   /**
    * Expiration time for signed URLs (in seconds)

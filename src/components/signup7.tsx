@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import { CheckSquare, FolderKanban, Users } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
@@ -44,43 +46,55 @@ const Signup7 = () => {
             <div className="mt-10">
               <p className="text-muted-foreground text-sm">
                 Already a user?{" "}
-                <a href="/#" className="text-primary">
+                <Link href="/" className="text-primary">
                   Log in
-                </a>
+                </Link>
               </p>
               <p className="text-muted-foreground text-sm">
                 By continuing, you agree to our{" "}
-                <a href="/#" className="text-primary">
+                <Link href="/" className="text-primary">
                   Terms{" "}
-                </a>
+                </Link>
                 and{" "}
-                <a href="/#" className="text-primary">
+                <Link href="/" className="text-primary">
                   Privacy Policy.
-                </a>
+                </Link>
               </p>
             </div>
           </div>
           <div className="border-border lg:bg-muted/60 rounded-l-2xl pt-14 lg:border-y lg:border-l lg:py-8 lg:pl-12">
             <div className="mx-auto flex max-w-xl justify-between gap-4 lg:mx-0 lg:max-w-none lg:justify-start lg:gap-8">
               <div className="flex flex-row items-center gap-4">
-                <img
-                  src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/ph-monthly.svg"
-                  alt="g2 monthly"
-                  className="h-10"
-                />
-                <img
-                  src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/producthunt-badge.png"
-                  alt="g2"
-                  className="h-10"
-                />
+                <div className="relative h-10 w-auto">
+                  <Image
+                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/ph-monthly.svg"
+                    alt="g2 monthly"
+                    height={40}
+                    width={120}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative h-10 w-auto">
+                  <Image
+                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/producthunt-badge.png"
+                    alt="g2"
+                    height={40}
+                    width={120}
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
             <div className="border-border bg-muted mt-6 hidden rounded-l-xl border-y border-l border-dashed py-1.5 pl-1.5 lg:block">
-              <img
-                src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
-                alt="placeholder"
-                className="border-border max-h-[450px] w-full rounded-l-xl border-y border-l object-cover"
-              />
+              <div className="relative max-h-[450px] w-full">
+                <Image
+                  src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-dark-1.svg"
+                  alt="placeholder"
+                  width={600}
+                  height={450}
+                  className="border-border rounded-l-xl border-y border-l object-cover w-full"
+                />
+              </div>
             </div>
             <div className="mr-3 mt-8 hidden grid-cols-3 gap-3 lg:grid">
               <div>

@@ -18,11 +18,11 @@ export class ConsoleStorageProvider implements StorageProvider {
   private files = new Map<string, FileMetadata>();
 
   constructor(config: ConsoleStorageConfig = {}) {
-    this.uploadDir = config.uploadDir || path.join(process.cwd(), "uploads");
-    this.baseUrl = config.baseUrl || "http://localhost:3000/uploads";
+    this.uploadDir = config.uploadDir ?? path.join(process.cwd(), "uploads");
+    this.baseUrl = config.baseUrl ?? "http://localhost:3000/uploads";
     
     // Ensure upload directory exists
-    this.ensureUploadDir();
+    void this.ensureUploadDir();
   }
 
   private async ensureUploadDir() {
@@ -49,7 +49,7 @@ export class ConsoleStorageProvider implements StorageProvider {
       const reader = file.getReader();
       
       while (true) {
-        const { done, value } = await reader.read();
+        const { done, value } = await reader.read() as { done: boolean; value: Uint8Array };
         if (done) break;
         chunks.push(value);
       }
@@ -67,8 +67,8 @@ export class ConsoleStorageProvider implements StorageProvider {
 
     const metadata: FileMetadata = {
       id: key,
-      fileName: options?.fileName || key.split("/").pop() || key,
-      mimeType: options?.mimeType || "application/octet-stream",
+      fileName: options?.fileName ?? key.split("/").pop() ?? key,
+      mimeType: options?.mimeType ?? "application/octet-stream",
       size: buffer.length,
       uploadedAt: new Date(),
       metadata: options?.metadata,
@@ -133,7 +133,7 @@ export class ConsoleStorageProvider implements StorageProvider {
       
       const metadata: FileMetadata = {
         id: key,
-        fileName: key.split("/").pop() || key,
+        fileName: key.split("/").pop() ?? key,
         mimeType: "application/octet-stream",
         size: stats.size,
         uploadedAt: stats.birthtime,
@@ -147,7 +147,7 @@ export class ConsoleStorageProvider implements StorageProvider {
   }
 
   async list(prefix?: string, limit = 100): Promise<FileMetadata[]> {
-    console.log(`[Storage] Listing files with prefix: ${prefix || "none"}`);
+    console.log(`[Storage] Listing files with prefix: ${prefix ?? "none"}`);
     
     const results: FileMetadata[] = [];
     

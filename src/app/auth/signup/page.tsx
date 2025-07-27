@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { signIn } from "next-auth/react";
-import Link from "next/link";
+import Image from "next/image";
 import { Shield, Zap, Code2 } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 
@@ -51,7 +51,7 @@ export default function SignupPage() {
     setIsLoading(true);
     try {
       await signIn("google", { callbackUrl: "/" });
-    } catch (error) {
+    } catch {
       setError("Failed to sign up with Google");
       setIsLoading(false);
     }
@@ -105,11 +105,11 @@ export default function SignupPage() {
                     </div>
                     <h2 className="font-semibold text-xl">Check your email!</h2>
                     <p className="text-muted-foreground">
-                      We've sent a verification link to your email address. 
+                      We&apos;ve sent a verification link to your email address. 
                       Please check your inbox and click the link to verify your account.
                     </p>
                     <p className="text-muted-foreground text-sm">
-                      Didn't receive the email? Check your spam folder or{" "}
+                      Didn&apos;t receive the email? Check your spam folder or{" "}
                       <button
                         onClick={() => {
                           resendVerificationMutation.mutate({ email: userEmail });
@@ -246,11 +246,12 @@ export default function SignupPage() {
                   </div>
                 </div>
                 
-                <div className="mb-8 rounded-xl overflow-hidden border border-border/50 shadow-lg">
-                  <img
+                <div className="mb-8 rounded-xl overflow-hidden border border-border/50 shadow-lg relative h-64">
+                  <Image
                     src="/signup-image.png"
                     alt="Fast SaaS Dashboard Preview"
-                    className="w-full h-64 object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 

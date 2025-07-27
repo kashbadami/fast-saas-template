@@ -3,6 +3,7 @@
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import { cn } from "~/lib/utils";
 import { content } from "~/lib/config";
@@ -27,7 +28,14 @@ const Navbar = () => {
     <section className="top-5 lg:top-12 left-1/2 z-50 fixed bg-background/70 backdrop-blur-md border rounded-full w-[min(calc(100%-3rem),1000px)] -translate-x-1/2">
       <div className="flex justify-between items-center px-6 py-3">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <img src={brand.logo} alt={brand.name} className="w-10 h-8" />
+          <div className="relative w-10 h-8">
+            <Image
+              src={brand.logo}
+              alt={brand.name}
+              fill
+              className="object-contain"
+            />
+          </div>
           <span className="hidden sm:inline font-semibold text-lg">{brand.name}</span>
         </Link>
 

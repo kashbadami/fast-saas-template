@@ -5,9 +5,10 @@ import { api } from "~/trpc/server";
 export default async function BlogDetailPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const blog = await api.blog.getById({ id: params.id });
+  const { id } = await params;
+  const blog = await api.blog.getById({ id });
 
   if (!blog) {
     notFound();

@@ -1,5 +1,6 @@
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { type DefaultSession, type NextAuthConfig, type Adapter } from "next-auth";
+import type { Adapter } from "@auth/core/adapters";
+import { type DefaultSession, type NextAuthConfig } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -11,7 +12,7 @@ import { emailService } from "~/server/email";
 
 // Custom adapter that wraps PrismaAdapter to send welcome emails
 function createCustomAdapter(prismaDb: typeof db): Adapter {
-  const baseAdapter = PrismaAdapter(prismaDb) as Adapter;
+  const baseAdapter = PrismaAdapter(prismaDb);
   
   return {
     ...baseAdapter,
@@ -24,11 +25,11 @@ function createCustomAdapter(prismaDb: typeof db): Adapter {
       // Send welcome email immediately after user creation
       if (newUser.email) {
         try {
-          const baseUrl = env.NEXTAUTH_URL || "http://localhost:3000";
+          const baseUrl = env.NEXTAUTH_URL ?? "http://localhost:3000";
           console.log("📧 Sending welcome email to new user:", newUser.email);
           
           await emailService.sendWelcomeEmail({
-            name: newUser.name || "there",
+            name: newUser.name ?? "there",
             email: newUser.email,
             dashboardUrl: baseUrl,
           });

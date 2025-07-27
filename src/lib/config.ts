@@ -113,10 +113,81 @@ export interface ContentConfig {
       color: string;
     }>;
   };
-  socialProof: any;
-  pricing: any;
-  faq: any;
-  footer: any;
+  socialProof: {
+    stats: {
+      headline: HeadlineConfig;
+      items: Array<{
+        icon: string;
+        value: string;
+        label: string;
+        description: string;
+      }>;
+    };
+    testimonials: {
+      pill: string;
+      headline: HeadlineConfig;
+      subheadline: string;
+      items: Array<{
+        content: string;
+        author: {
+          name: string;
+          role: string;
+          company: string;
+          image: string;
+        };
+        rating: number;
+      }>;
+    };
+    logos: {
+      title: string;
+      items: Array<{
+        name: string;
+        url: string;
+        showName: boolean;
+        className?: string;
+      }>;
+    };
+  };
+  pricing: {
+    pill: string;
+    headline: HeadlineConfig;
+    subheadline: string;
+    plans: Array<{
+      name: string;
+      price: string;
+      description: string;
+      features: string[];
+      highlighted?: boolean;
+    }>;
+  };
+  faq: {
+    pill: string;
+    headline: HeadlineConfig;
+    subheadline?: string;
+    items: Array<{
+      question: string;
+      answer: string;
+    }>;
+  };
+  footer: {
+    company: {
+      name: string;
+      description: string;
+      logo: string;
+    };
+    links: Array<{
+      title: string;
+      items: Array<{
+        label: string;
+        href: string;
+      }>;
+    }>;
+    social: Array<{
+      name: string;
+      href: string;
+      icon: string;
+    }>;
+  };
   finalCta: {
     badge: string;
     headline: HeadlineConfig;
@@ -166,8 +237,8 @@ export interface BrandingConfig {
 }
 
 // Export typed configurations
-export const content = contentConfig as ContentConfig;
-export const branding = brandingConfig as BrandingConfig;
+export const content = contentConfig as unknown as ContentConfig;
+export const branding = brandingConfig as unknown as BrandingConfig;
 
 // Helper function to get color classes for headline parts
 export function getHeadlineColorClass(color?: string) {
@@ -190,5 +261,5 @@ export function getColor(colorName: keyof BrandingConfig["colors"]) {
 
 // Helper to replace template variables
 export function interpolate(text: string, variables: Record<string, string>) {
-  return text.replace(/{(\w+)}/g, (match, key) => variables[key] || match);
+  return text.replace(/{(\w+)}/g, (match, key: string) => variables[key] ?? match);
 }

@@ -134,7 +134,7 @@ export const welcomeEmailTemplate: EmailTemplateFunction<WelcomeEmailData> = (da
             </ul>
             
             <div style="text-align: center;">
-              <a href="${data.dashboardUrl || '#'}" class="button" style="background-color: #f97316; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; display: inline-block; font-weight: normal; font-size: 16px;">
+              <a href="${data.dashboardUrl ?? '#'}" class="button" style="background-color: #f97316; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; display: inline-block; font-weight: normal; font-size: 16px;">
                 Dive into your dashboard →
               </a>
             </div>
@@ -211,7 +211,7 @@ HERE'S WHAT JUST HAPPENED:
 • Our excitement level? Through the roof. 🚀
 • Hotel? Trivago. (Sorry, couldn't resist)
 
-Dive into your dashboard: ${data.dashboardUrl || '[Dashboard URL]'}
+Dive into your dashboard: ${data.dashboardUrl ?? '[Dashboard URL]'}
 
 P.S. Remember when Netflix was just a DVD-by-mail service? When Amazon only 
 sold books? Every legendary journey starts with someone clicking a button. 

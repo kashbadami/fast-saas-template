@@ -48,10 +48,10 @@ export function getDocBySlug(slug: string): Doc | null {
     return {
       slug,
       meta: {
-        title: data.title || slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
-        description: data.description,
-        order: data.order ?? 999,
-        category: data.category ?? "General",
+        title: (data.title as string | undefined) ?? slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
+        description: data.description as string | undefined,
+        order: (data.order as number | undefined) ?? 999,
+        category: (data.category as string | undefined) ?? "General",
       },
       content,
     };

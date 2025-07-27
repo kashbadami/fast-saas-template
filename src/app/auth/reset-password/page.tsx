@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ import { Label } from "~/components/ui/label";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { api } from "~/trpc/react";
 
-export default function ResetPasswordPage() {
+function ResetPasswordContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const token = searchParams.get("token");
@@ -167,5 +167,26 @@ export default function ResetPasswordPage() {
         )}
       </div>
     </section>
+  );
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={
+      <section className="w-full px-4">
+        <div className="w-full max-w-md mx-auto">
+          <Card className="w-full">
+            <CardHeader className="text-center">
+              <h1 className="text-2xl font-bold">Create new password</h1>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-muted-foreground">Loading...</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    }>
+      <ResetPasswordContent />
+    </Suspense>
   );
 }

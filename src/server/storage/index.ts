@@ -24,7 +24,7 @@ class StorageService {
         this.provider = config.instance;
         break;
       default:
-        throw new Error(`Unknown storage provider: ${(config as any).provider}`);
+        throw new Error(`Unknown storage provider: ${(config as { provider: string }).provider}`);
     }
   }
 
@@ -35,7 +35,7 @@ class StorageService {
 
 // Initialize storage based on environment
 function createStorage(): StorageService {
-  const provider = process.env.STORAGE_PROVIDER || "console";
+  const provider = process.env.STORAGE_PROVIDER ?? "console";
 
   switch (provider) {
     case "s3":

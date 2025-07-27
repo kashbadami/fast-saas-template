@@ -24,7 +24,7 @@ export interface EmailTemplate {
   text?: string;
 }
 
-export type EmailTemplateFunction<T = any> = (data: T) => EmailTemplate;
+export type EmailTemplateFunction<T = Record<string, unknown>> = (data: T) => EmailTemplate;
 
 // Template data types
 export interface VerificationEmailData {

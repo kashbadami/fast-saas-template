@@ -29,7 +29,7 @@ export class S3StorageProvider implements StorageProvider {
     this.publicBaseUrl = config.publicBaseUrl;
 
     this.client = new S3Client({
-      region: config.region || process.env.AWS_REGION || "us-east-1",
+      region: config.region ?? process.env.AWS_REGION ?? "us-east-1",
       credentials: config.accessKeyId && config.secretAccessKey
         ? {
             accessKeyId: config.accessKeyId,
@@ -51,9 +51,9 @@ export class S3StorageProvider implements StorageProvider {
     const command = new PutObjectCommand({
       Bucket: this.bucket,
       Key: key,
-      Body: body as any,
+      Body: body as Buffer | Uint8Array,
       ContentType: options?.mimeType,
-      Metadata: options?.metadata,
+      Metadata: options?.metadata as Record<string, string> | undefined,
       ACL: options?.public ? "public-read" : undefined,
     });
 
@@ -61,8 +61,8 @@ export class S3StorageProvider implements StorageProvider {
 
     const metadata: FileMetadata = {
       id: key,
-      fileName: options?.fileName || key.split("/").pop() || key,
-      mimeType: options?.mimeType || "application/octet-stream",
+      fileName: options?.fileName ?? key.split("/").pop() ?? key,
+      mimeType: options?.mimeType ?? "application/octet-stream",
       size: body instanceof Buffer ? body.length : 0,
       uploadedAt: new Date(),
       metadata: options?.metadata,
@@ -111,7 +111,7 @@ export class S3StorageProvider implements StorageProvider {
 
       await this.client.send(command);
       return true;
-    } catch (error) {
+    } catch {
       return false;
     }
   }
@@ -127,13 +127,13 @@ export class S3StorageProvider implements StorageProvider {
 
       return {
         id: key,
-        fileName: key.split("/").pop() || key,
-        mimeType: response.ContentType || "application/octet-stream",
-        size: response.ContentLength || 0,
-        uploadedAt: response.LastModified || new Date(),
+        fileName: key.split("/").pop() ?? key,
+        mimeType: response.ContentType ?? "application/octet-stream",
+        size: response.ContentLength ?? 0,
+        uploadedAt: response.LastModified ?? new Date(),
         metadata: response.Metadata,
       };
-    } catch (error) {
+    } catch {
       return null;
     }
   }
@@ -147,12 +147,12 @@ export class S3StorageProvider implements StorageProvider {
 
     const response = await this.client.send(command);
     
-    return (response.Contents || []).map((object) => ({
+    return (response.Contents ?? []).map((object) => ({
       id: object.Key!,
-      fileName: object.Key!.split("/").pop() || object.Key!,
+      fileName: object.Key!.split("/").pop() ?? object.Key!,
       mimeType: "application/octet-stream",
-      size: object.Size || 0,
-      uploadedAt: object.LastModified || new Date(),
+      size: object.Size ?? 0,
+      uploadedAt: object.LastModified ?? new Date(),
     }));
   }
 }

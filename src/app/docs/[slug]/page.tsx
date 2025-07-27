@@ -6,9 +6,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 interface DocPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -19,7 +19,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: DocPageProps) {
-  const doc = getDocBySlug(params.slug);
+  const { slug } = await params;
+  const doc = getDocBySlug(slug);
   
   if (!doc) {
     return {
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }: DocPageProps) {
   };
 }
 
-export default function DocPage({ params }: DocPageProps) {
-  const doc = getDocBySlug(params.slug);
+export default async function DocPage({ params }: DocPageProps) {
+  const { slug } = await params;
+  const doc = getDocBySlug(slug);
 
   if (!doc) {
     notFound();
@@ -42,7 +44,7 @@ export default function DocPage({ params }: DocPageProps) {
 
   // Get navigation links
   const slugs = getDocSlugs();
-  const currentIndex = slugs.indexOf(params.slug);
+  const currentIndex = slugs.indexOf(slug);
   const prevSlug = currentIndex > 0 ? slugs[currentIndex - 1] : null;
   const nextSlug = currentIndex < slugs.length - 1 ? slugs[currentIndex + 1] : null;
   

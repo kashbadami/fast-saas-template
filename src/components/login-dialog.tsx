@@ -50,7 +50,7 @@ export function LoginDialog({ open, onOpenChange }: LoginDialogProps) {
         onOpenChange(false);
         router.refresh();
       }
-    } catch (error) {
+    } catch {
       setError("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
@@ -61,7 +61,7 @@ export function LoginDialog({ open, onOpenChange }: LoginDialogProps) {
     setIsLoading(true);
     try {
       await signIn("google", { callbackUrl: "/" });
-    } catch (error) {
+    } catch {
       setError("Failed to sign in with Google");
       setIsLoading(false);
     }
@@ -169,7 +169,7 @@ export function LoginDialog({ open, onOpenChange }: LoginDialogProps) {
         )}
 
         <p className="text-center text-sm text-muted-foreground">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link
             href="/auth/signup"
             className="text-[#f97316] hover:underline"

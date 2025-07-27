@@ -1,13 +1,13 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { Button } from "~/components/ui/button";
 import { api } from "~/trpc/react";
 
-export default function VerifyEmailPage() {
+function VerifyEmailContent() {
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
   const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
@@ -31,7 +31,7 @@ export default function VerifyEmailPage() {
       setStatus("error");
       setMessage("No verification token provided");
     }
-  }, [token]);
+  }, [token, verifyMutation]);
 
   return (
     <section className="w-full px-4">
@@ -103,5 +103,26 @@ export default function VerifyEmailPage() {
         </Card>
       </div>
     </section>
+  );
+}
+
+export default function VerifyEmailPage() {
+  return (
+    <Suspense fallback={
+      <section className="w-full px-4">
+        <div className="w-full max-w-md mx-auto">
+          <Card className="w-full">
+            <CardHeader className="text-center">
+              <h1 className="text-2xl font-bold">Email Verification</h1>
+            </CardHeader>
+            <CardContent className="text-center">
+              <p className="text-muted-foreground">Loading...</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    }>
+      <VerifyEmailContent />
+    </Suspense>
   );
 }

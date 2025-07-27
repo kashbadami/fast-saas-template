@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Separator } from "~/components/ui/separator";
 
 const sections = [
@@ -49,11 +50,14 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="w-full lg:max-w-md">
               <div className="flex items-center gap-2 mb-4">
-                <img
-                  src="/fast-saas-logo.png"
-                  alt="Fast SaaS"
-                  className="h-10 w-12"
-                />
+                <div className="relative h-10 w-12">
+                  <Image
+                    src="/fast-saas-logo.png"
+                    alt="Fast SaaS"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <h2 className="text-xl font-semibold">Fast SaaS</h2>
               </div>
               <p className="text-sm text-muted-foreground mb-6">

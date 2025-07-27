@@ -4,6 +4,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useMemo } from "react";
 import { useCallback } from "react";
+import Image from "next/image";
 
 import { cn } from "~/lib/utils";
 import { useIsMobile } from "~/hooks/use-mobile";
@@ -45,7 +46,7 @@ const Hero = () => {
 
   const scrollbarBars = useMemo(
     () =>
-      [...Array(40)].map((_, item) => (
+      [...Array(40) as unknown[]].map((_, item) => (
         <motion.div
           key={item}
           initial={{
@@ -99,18 +100,27 @@ const Hero = () => {
                   className={`h-[420px] w-full transition-all duration-500 ease-in-out ${getRotation(index)}`}
                 >
                   <div className="relative h-full w-full rounded-2xl overflow-hidden border border-border/20 apple-shadow bg-card hover:apple-shadow-hover transition-shadow duration-300">
-                    <img
+                    <Image
                       src={
                         index == hero.testimonials.length
-                          ? hero.testimonials[0]?.image
+                          ? hero.testimonials[0]?.image ?? ""
                           : index == hero.testimonials.length + 1
-                            ? hero.testimonials[1]?.image
+                            ? hero.testimonials[1]?.image ?? ""
                             : index == hero.testimonials.length + 2
-                              ? hero.testimonials[2]?.image
-                              : hero.testimonials[index]?.image
+                              ? hero.testimonials[2]?.image ?? ""
+                              : hero.testimonials[index]?.image ?? ""
                       }
-                      className="h-full w-full object-cover"
-                      alt=""
+                      alt={
+                        index == hero.testimonials.length
+                          ? hero.testimonials[0]?.name ?? ""
+                          : index == hero.testimonials.length + 1
+                            ? hero.testimonials[1]?.name ?? ""
+                            : index == hero.testimonials.length + 2
+                              ? hero.testimonials[2]?.name ?? ""
+                              : hero.testimonials[index]?.name ?? ""
+                      }
+                      fill
+                      className="object-cover"
                     />
                     {/* Subtle gradient overlay for depth */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />

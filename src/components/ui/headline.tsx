@@ -5,7 +5,7 @@ interface HeadlineProps {
   className?: string;
 }
 
-export function Headline({ config, className }: HeadlineProps) {
+export function Headline({ config }: HeadlineProps) {
   return (
     <>
       {config.parts.map((part, idx) => {

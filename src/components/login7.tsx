@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader } from "~/components/ui/card";
 import { Input } from "~/components/ui/input";
@@ -14,11 +15,14 @@ const Login7 = () => {
                 href="https://www.shadcnblocks.com"
                 className="flex items-center gap-2"
               >
-                <img
-                  src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
-                  className="max-h-8"
-                  alt="Shadcn UI Navbar"
-                />
+                <div className="relative h-8 w-8">
+                  <Image
+                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg"
+                    alt="Shadcn UI Navbar"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <span className="text-lg font-semibold tracking-tighter">
                   Shadcnblocks.com
                 </span>
@@ -27,11 +31,14 @@ const Login7 = () => {
             <CardContent>
               <div className="grid gap-4">
                 <Button variant="outline" className="w-full">
-                  <img
-                    src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/google-icon.svg"
-                    className="mr-2 size-4"
-                    alt="Google"
-                  />
+                  <div className="relative mr-2 h-4 w-4">
+                    <Image
+                      src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/google-icon.svg"
+                      alt="Google"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                   Sign up with Google
                 </Button>
                 <div className="flex items-center gap-4">

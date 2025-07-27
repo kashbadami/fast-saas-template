@@ -1,9 +1,7 @@
 import { FileCode, Github } from "lucide-react";
 import Link from "next/link";
 
-import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
-import { Separator } from "~/components/ui/separator";
 import { Section } from "~/components/ui/section";
 import { Headline } from "~/components/ui/headline";
 import { content } from "~/lib/config";

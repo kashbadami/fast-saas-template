@@ -51,12 +51,12 @@ export const authRouter = createTRPCRouter({
       const verificationToken = await generateVerificationToken(email);
       
       // Create verification URL
-      const baseUrl = env.NEXTAUTH_URL || "http://localhost:3000";
+      const baseUrl = env.NEXTAUTH_URL ?? "http://localhost:3000";
       const verificationUrl = `${baseUrl}/auth/verify?token=${verificationToken.token}`;
 
       // Send verification email
       await emailService.sendVerificationEmail({
-        name: name || "there",
+        name: name ?? "there",
         email,
         verificationUrl,
       });
@@ -91,15 +91,15 @@ export const authRouter = createTRPCRouter({
       if (!result.success) {
         throw new TRPCError({
           code: "BAD_REQUEST",
-          message: result.error || "Invalid or expired token",
+          message: result.error ?? "Invalid or expired token",
         });
       }
 
       // Send welcome email after successful verification
       if (result.user) {
-        const baseUrl = env.NEXTAUTH_URL || "http://localhost:3000";
+        const baseUrl = env.NEXTAUTH_URL ?? "http://localhost:3000";
         await emailService.sendWelcomeEmail({
-          name: result.user.name || "there",
+          name: result.user.name ?? "there",
           email: result.user.email!,
           dashboardUrl: baseUrl,
         });
@@ -143,12 +143,12 @@ export const authRouter = createTRPCRouter({
       const verificationToken = await generateVerificationToken(input.email);
       
       // Create verification URL
-      const baseUrl = env.NEXTAUTH_URL || "http://localhost:3000";
+      const baseUrl = env.NEXTAUTH_URL ?? "http://localhost:3000";
       const verificationUrl = `${baseUrl}/auth/verify?token=${verificationToken.token}`;
 
       // Send verification email
       await emailService.sendVerificationEmail({
-        name: user.name || "there",
+        name: user.name ?? "there",
         email: input.email,
         verificationUrl,
       });
@@ -179,12 +179,12 @@ export const authRouter = createTRPCRouter({
       const resetToken = await generatePasswordResetToken(input.email);
       
       // Create reset URL
-      const baseUrl = env.NEXTAUTH_URL || "http://localhost:3000";
+      const baseUrl = env.NEXTAUTH_URL ?? "http://localhost:3000";
       const resetUrl = `${baseUrl}/auth/reset-password?token=${resetToken.token}`;
 
       // Send reset email
       await emailService.sendPasswordResetEmail({
-        name: user.name || "there",
+        name: user.name ?? "there",
         email: input.email,
         resetUrl,
       });
@@ -207,7 +207,7 @@ export const authRouter = createTRPCRouter({
       if (!result.success || !result.email) {
         throw new TRPCError({
           code: "BAD_REQUEST",
-          message: result.error || "Invalid or expired reset token",
+          message: result.error ?? "Invalid or expired reset token",
         });
       }
 

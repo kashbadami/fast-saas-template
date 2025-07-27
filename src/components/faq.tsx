@@ -162,7 +162,7 @@ export function FAQ() {
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i]
-        if (section.element && section.element.offsetTop <= scrollPosition) {
+        if (section?.element && section.element.offsetTop <= scrollPosition) {
           setActiveCategory(section.category)
           break
         }

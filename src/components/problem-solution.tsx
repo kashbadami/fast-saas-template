@@ -1,6 +1,7 @@
 "use client";
 
 import * as Icons from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 import { FeatureCard } from "~/components/ui/feature-card";
 import { Section } from "~/components/ui/section";
 import { Headline } from "~/components/ui/headline";
@@ -21,12 +22,11 @@ export function ProblemSolution() {
       >
         <div className="grid gap-4 md:grid-cols-3">
           {problem.cards.map((card, idx) => {
-            // @ts-ignore - Dynamic icon lookup
-            const Icon = Icons[card.icon];
+            const Icon = Icons[card.icon as keyof typeof Icons] as React.ComponentType<{ className?: string; strokeWidth?: number }>;
             return (
               <FeatureCard
                 key={idx}
-                icon={Icon}
+                icon={Icon as unknown as LucideIcon}
                 title={card.title}
                 description={card.description}
                 iconColor="text-red-500 border-red-500"
@@ -84,8 +84,7 @@ export function ProblemSolution() {
       >
         <div className="grid gap-4 md:grid-cols-3">
           {solution.cards.map((card, idx) => {
-            // @ts-ignore - Dynamic icon lookup
-            const Icon = Icons[card.icon];
+            const Icon = Icons[card.icon as keyof typeof Icons] as React.ComponentType<{ className?: string; strokeWidth?: number }>;
             const colorClass = 
               card.color === "primary" ? "text-[#f97316] border-[#f97316]" :
               card.color === "blue" ? "text-[#1e40af] border-[#1e40af]" :
@@ -97,7 +96,7 @@ export function ProblemSolution() {
             return (
               <FeatureCard
                 key={idx}
-                icon={Icon}
+                icon={Icon as unknown as LucideIcon}
                 title={card.title}
                 description={card.description}
                 iconColor={colorClass}
