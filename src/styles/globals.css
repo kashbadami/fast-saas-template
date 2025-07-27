@@ -4,8 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-playfair: var(--font-playfair);
 }
 
 @theme inline {
@@ -44,28 +45,55 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Brand Colors */
+  --color-brand-blue: #1e40af;
+  --color-brand-orange: #f97316;
+  --color-brand-charcoal: #374151;
+  --color-brand-light-gray: #f8fafc;
+  --color-brand-medium-gray: #64748b;
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  
+  /* Secondary/Accent Colors from shadcnblocks */
+  --color-muted-2: oklch(92.5%, 0%, 89.876%);
+  --color-muted-2-foreground: oklch(55.2%, 3.5%, 285.938%);
+  
+  /* Gradient Colors */
+  --color-gradient-1: oklch(64.3%, 40.75%, 269.926%);
+  --color-gradient-2: oklch(72.7%, 46.75%, 144.688%);
+  --color-gradient-3: oklch(70.1%, 37.75%, 339.956%);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.141 0.005 285.823);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.21 0.006 285.885);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.967 0.001 286.375);
-  --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.21 0.006 285.885);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.705 0.015 286.067);
+  --background: #f8fafc; /* Light Gray */
+  --foreground: #374151; /* Charcoal */
+  --card: #ffffff; /* White */
+  --card-foreground: #374151; /* Charcoal */
+  --popover: #ffffff; /* White */
+  --popover-foreground: #374151; /* Charcoal */
+  --primary: #1e40af; /* Deep Blue */
+  --primary-foreground: #ffffff; /* White */
+  --secondary: #f97316; /* Vibrant Orange */
+  --secondary-foreground: #ffffff; /* White */
+  --muted: #f8fafc; /* Light Gray */
+  --muted-foreground: #64748b; /* Medium Gray */
+  --accent: #f97316; /* Vibrant Orange */
+  --accent-foreground: #ffffff; /* White */
+  --destructive: #ef4444; /* Red for errors */
+  --border: #e5e7eb; /* Light border */
+  --input: #e5e7eb; /* Light border */
+  --ring: #1e40af; /* Deep Blue */
+  
+  /* Enhanced shadow system */
+  --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+  --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+  --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+  --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+  --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -82,24 +110,33 @@
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.92 0.004 286.32);
-  --primary-foreground: oklch(0.21 0.006 285.885);
-  --secondary: oklch(0.274 0.006 286.033);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.552 0.016 285.938);
+  --background: #0f172a; /* Dark background */
+  --foreground: #f8fafc; /* Light Gray */
+  --card: #1e293b; /* Dark card */
+  --card-foreground: #f8fafc; /* Light Gray */
+  --popover: #1e293b; /* Dark card */
+  --popover-foreground: #f8fafc; /* Light Gray */
+  --primary: #3b82f6; /* Lighter blue for dark mode */
+  --primary-foreground: #ffffff; /* White */
+  --secondary: #fb923c; /* Lighter orange for dark mode */
+  --secondary-foreground: #ffffff; /* White */
+  --muted: #1e293b; /* Dark muted */
+  --muted-foreground: #94a3b8; /* Light muted text */
+  --accent: #fb923c; /* Lighter orange for dark mode */
+  --accent-foreground: #ffffff; /* White */
+  --destructive: #ef4444; /* Red for errors */
+  --border: #334155; /* Dark border */
+  --input: #334155; /* Dark border */
+  --ring: #3b82f6; /* Lighter blue for dark mode */
+  
+  /* Secondary colors for dark mode */
+  --color-muted-2: oklch(30.1%, 0%, 89.876%);
+  --color-muted-2-foreground: oklch(80.2%, 1%, 286.305%);
+  
+  /* Gradient colors adjusted for dark mode */
+  --color-gradient-1: oklch(27%, 39.25%, 269.284%);
+  --color-gradient-2: oklch(72.7%, 46.75%, 144.688%);
+  --color-gradient-3: oklch(70.1%, 37.75%, 339.956%);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -122,4 +159,48 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+/* Apple-style widget shadows and effects */
+.apple-shadow {
+  box-shadow: 
+    0 0 0 0.5px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 8px 16px rgba(0, 0, 0, 0.08),
+    0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.apple-shadow-hover {
+  box-shadow: 
+    0 0 0 0.5px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    0 12px 24px rgba(0, 0, 0, 0.12),
+    0 24px 48px rgba(0, 0, 0, 0.16);
 }

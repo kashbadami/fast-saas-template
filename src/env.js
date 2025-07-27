@@ -19,6 +19,22 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    // Email configuration
+    EMAIL_FROM: z.string().email().optional(),
+    EMAIL_FROM_NAME: z.string().optional(),
+    // AWS SES configuration
+    AWS_SES_REGION: z.string().optional(),
+    AWS_ACCESS_KEY_ID: z.string().optional(),
+    AWS_SECRET_ACCESS_KEY: z.string().optional(),
+    // App URL for email links
+    NEXTAUTH_URL: z.string().url().optional(),
+    // Storage configuration
+    STORAGE_PROVIDER: z.enum(["console", "s3"]).default("console"),
+    AWS_S3_BUCKET: z.string().optional(),
+    AWS_S3_PUBLIC_URL: z.string().url().optional(),
+    AWS_REGION: z.string().optional(),
+    UPLOAD_DIR: z.string().optional(),
+    UPLOAD_BASE_URL: z.string().url().optional(),
   },
 
   /**
@@ -42,6 +58,18 @@ export const env = createEnv({
     AUTH_GOOGLE_SECRET: process.env.AUTH_GOOGLE_SECRET,
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
+    EMAIL_FROM: process.env.EMAIL_FROM,
+    EMAIL_FROM_NAME: process.env.EMAIL_FROM_NAME,
+    AWS_SES_REGION: process.env.AWS_SES_REGION,
+    AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+    AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    STORAGE_PROVIDER: process.env.STORAGE_PROVIDER,
+    AWS_S3_BUCKET: process.env.AWS_S3_BUCKET,
+    AWS_S3_PUBLIC_URL: process.env.AWS_S3_PUBLIC_URL,
+    AWS_REGION: process.env.AWS_REGION,
+    UPLOAD_DIR: process.env.UPLOAD_DIR,
+    UPLOAD_BASE_URL: process.env.UPLOAD_BASE_URL,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

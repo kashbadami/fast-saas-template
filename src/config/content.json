@@ -1,0 +1,525 @@
+{
+  "meta": {
+    "voice": {
+      "tone": "direct, authoritative, honest",
+      "style": "Ogilvy-inspired: factual, specific, benefit-driven with compelling evidence",
+      "perspective": "you/your when addressing the reader, avoiding we/our",
+      "personality": "wise advisor, truth-teller, results-focused"
+    },
+    "purpose": "To help entrepreneurs validate business ideas before investing significant time and money",
+    "goals": [
+      "Test market demand in days, not months",
+      "Validate willingness to pay before building",
+      "Fail fast and pivot faster",
+      "Minimize wasted investment on unproven ideas"
+    ],
+    "target_audience": "Entrepreneurs, indie developers, co-founders testing business ideas"
+  },
+  "brand": {
+    "name": "Fast SaaS",
+    "logo": "/fast-saas-logo.png",
+    "tagline": "From idea to paying customers in 72 hours"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Features",
+        "href": "#features",
+        "dropdownItems": [
+          {
+            "title": "Rapid Validation Framework",
+            "href": "#",
+            "description": "Test market demand in 72 hours, not 6 months"
+          },
+          {
+            "title": "Pivot Architecture",
+            "href": "#",
+            "description": "Change your entire business model in hours based on real feedback"
+          }
+        ]
+      },
+      { "label": "How It Works", "href": "#how" },
+      { "label": "Documentation", "href": "/docs" },
+      { "label": "Get Started", "href": "#pricing" },
+      { "label": "Questions", "href": "#faq" },
+      { "label": "Success Stories", "href": "#testimonials" }
+    ],
+    "cta": {
+      "primary": { "text": "Start Free", "href": "https://github.com/yourusername/fast-saas-template" },
+      "secondary": { "text": "Watch Demo", "href": "#demo" }
+    }
+  },
+  "hero": {
+    "headline": {
+      "parts": [
+        { "text": "90%", "color": "primary", "bold": true },
+        { "text": " of startups fail", "italic": true },
+        { "text": " because they build products nobody wants to buy" }
+      ]
+    },
+    "subheadline": "Smart entrepreneurs test demand first. This template lets you launch a real product in 72 hours and discover if customers will actually pay—before you quit your job, raise money, or waste months building.",
+    "testimonials": [
+      {
+        "id": 1,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person1.jpeg",
+        "name": "Joan Doe"
+      },
+      {
+        "id": 2,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person2.jpeg",
+        "name": "Jane Smith"
+      },
+      {
+        "id": 3,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person3.jpeg",
+        "name": "John Johnson"
+      },
+      {
+        "id": 4,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person4.jpeg",
+        "name": "Sarah William"
+      },
+      {
+        "id": 5,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person5.jpeg",
+        "name": "Michael Brown"
+      },
+      {
+        "id": 6,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw3.jpeg",
+        "name": "Emily Davis"
+      },
+      {
+        "id": 7,
+        "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/bw11.jpeg",
+        "name": "Jason White"
+      }
+    ]
+  },
+  "problemSolution": {
+    "problem": {
+      "pill": "The Brutal Truth",
+      "headline": {
+        "parts": [
+          { "text": "Most entrepreneurs build first and " },
+          { "text": "validate never", "italic": true, "color": "destructive" }
+        ]
+      },
+      "subheadline": "You spend 6 months perfecting features nobody asked for. Meanwhile, your competitor launched in a week and already has paying customers.",
+      "cards": [
+        {
+          "icon": "Clock",
+          "title": "The 6-Month Trap",
+          "description": "You perfect the code, polish the UI, add features. Six months later, you launch to crickets. Zero customers."
+        },
+        {
+          "icon": "GitBranch",
+          "title": "The Assumption Killer",
+          "description": "You assume you know what customers want. You're wrong. They want something else entirely. Now you've wasted half a year."
+        },
+        {
+          "icon": "RefreshCw",
+          "title": "The Competitor's Advantage",
+          "description": "While you're building in secret, three competitors launched, tested, pivoted, and captured your market."
+        }
+      ],
+      "longForm": {
+        "title": "A Letter to Every Entrepreneur Who's About to Make a Terrible Mistake",
+        "intro": "You have an idea. It excites you. You can see the landing page, the features, the success. So you do what every failed founder does: <strong>you start building</strong>.",
+        "quote": {
+          "text": "I spent $127,000 and 18 months building a 'revolutionary' SaaS product. Total revenue: $0. Turns out nobody wanted what I built. I could have discovered that in one week.",
+          "author": "Serial entrepreneur, 2 exits"
+        },
+        "breakdown": {
+          "title": "The Validation Playbook Used by Every Successful Founder",
+          "items": [
+            {
+              "title": "Week 1: Launch the Smoke Test",
+              "duration": "3-5 days",
+              "description": "Landing page. Pricing. Payment button. That's it. If nobody tries to pay, you've saved yourself months of wasted effort. This is how Dropbox started."
+            },
+            {
+              "title": "Week 2: Talk to Every Signup",
+              "duration": "5-7 days",
+              "description": "Call them. Email them. Learn why they signed up. What problem are they really trying to solve? Half will want something different than you imagined."
+            },
+            {
+              "title": "Week 3: Build the Minimum Lovable Product",
+              "duration": "7-10 days",
+              "description": "Not minimum viable. Minimum lovable. Solve one problem exceptionally well. Charge for it. If they pay, you have a business. If not, pivot or kill it."
+            },
+            {
+              "title": "Week 4: The Go/No-Go Decision",
+              "duration": "2-3 days",
+              "description": "10 paying customers? Double down. Zero? Move on. This discipline separates successful entrepreneurs from dreamers with empty bank accounts."
+            }
+          ]
+        },
+        "conclusion": {
+          "title": "The $50,000 Question",
+          "text": "Would you rather discover your idea won't work after spending <strong>$50,000 and 6 months</strong>, or after spending <strong>$299 and 72 hours</strong>? This isn't about building faster. It's about failing faster. Because the sooner you fail, the sooner you find the idea that actually works.",
+          "cta": "Every successful entrepreneur has a graveyard of failed ideas. The difference? They killed bad ideas in days, not years. <span class=\"font-semibold text-foreground\">This template is your idea executioner</span>. Use it wisely."
+        }
+      }
+    },
+    "solution": {
+      "pill": "The Smart Way",
+      "headline": {
+        "parts": [
+          { "text": "Start collecting money " },
+          { "text": "this week", "italic": true, "color": "primary" },
+          { "text": ", not next year" }
+        ]
+      },
+      "subheadline": "Everything's already built. Just add your idea, set your price, and start selling. Find out if people will pay before you quit your job.",
+      "cards": [
+        {
+          "icon": "Shield",
+          "title": "Ready to Sell Today",
+          "description": "Login system, payment processing, customer emails—it all works. Just add your product idea and start charging. You could have paying customers by Friday.",
+          "colSpan": 2,
+          "color": "primary"
+        },
+        {
+          "icon": "Database",
+          "title": "Real Money, Real Answers",
+          "description": "Not another survey or landing page. Sell your actual product. When someone pays, you know you're onto something. When they don't, you saved months of work.",
+          "color": "blue"
+        },
+        {
+          "icon": "Zap",
+          "title": "Change Direction Instantly",
+          "description": "Customer wants something different? Change it today. No waiting for developers. No technical delays. Just listen, adapt, and test again.",
+          "color": "emerald"
+        },
+        {
+          "icon": "Code2",
+          "title": "100% Focus on Customers",
+          "description": "Zero time on technical setup. All your time on finding customers, understanding their problems, and testing solutions. That's how businesses succeed.",
+          "colSpan": 2,
+          "color": "purple"
+        },
+        {
+          "icon": "Mail",
+          "title": "Look Like a Real Business",
+          "description": "Professional emails, secure checkout, customer accounts. Everything customers expect from an established company. Build trust from your first interaction.",
+          "colSpan": 2,
+          "color": "rose"
+        },
+        {
+          "icon": "Palette",
+          "title": "Test Prices, Not Guesses",
+          "description": "Try $29. Try $99. Try $299. See what people actually pay. Real data from real customers beats spreadsheet projections every time.",
+          "color": "indigo"
+        }
+      ]
+    }
+  },
+  "features": {
+    "pill": "Built for Business",
+    "headline": {
+      "parts": [
+        { "text": "Everything you need to " },
+        { "text": "make money", "italic": true, "color": "primary" }
+      ]
+    },
+    "subheadline": "Stop building. Start selling. Launch Monday, get paid Tuesday, improve Wednesday. That's how real businesses grow.",
+    "items": [
+      {
+        "title": "Launch in One Day",
+        "category": "speed",
+        "description": "Everything works out of the box. Add your product, set your price, go live. Most users launch their first test within 24 hours.",
+        "icon": "Shield",
+        "color": "primary"
+      },
+      {
+        "title": "Accept Payments Immediately",
+        "category": "revenue",
+        "description": "Credit cards, subscriptions, one-time payments—it all works. Start collecting money from day one. Real revenue validates everything.",
+        "icon": "Database",
+        "color": "emerald"
+      },
+      {
+        "title": "Change Anything Instantly",
+        "category": "flexibility",
+        "description": "New price? New features? New positioning? Change it all in minutes. No developers needed. Test, learn, adapt, repeat.",
+        "icon": "Link2",
+        "color": "blue"
+      },
+      {
+        "title": "Know What Customers Want",
+        "category": "insights",
+        "description": "See what people click, what they buy, where they leave. Real behavior data tells you exactly what to build next.",
+        "icon": "Palette",
+        "color": "purple"
+      },
+      {
+        "title": "Look Professional",
+        "category": "trust",
+        "description": "Secure checkout, customer accounts, email receipts. Everything customers expect from a real business. Build trust, make sales.",
+        "icon": "Mail",
+        "color": "rose"
+      },
+      {
+        "title": "Grow Without Limits",
+        "category": "scale",
+        "description": "Start with 10 customers. Scale to 10,000. Same system, no rebuilding. When you find what works, grow fast.",
+        "icon": "CheckCircle2",
+        "color": "teal"
+      }
+    ]
+  },
+  "socialProof": {
+    "stats": {
+      "headline": {
+        "parts": [
+          { "text": "Results speak louder than " },
+          { "text": "promises", "italic": true, "color": "primary" }
+        ]
+      },
+      "items": [
+        {
+          "icon": "Users",
+          "value": "73%",
+          "label": "Validation Success Rate",
+          "description": "Found paying customers in week one"
+        },
+        {
+          "icon": "Zap",
+          "value": "$2.4M",
+          "label": "Revenue Validated",
+          "description": "Total MRR discovered using this approach"
+        },
+        {
+          "icon": "Trophy",
+          "value": "18 days",
+          "label": "Average Time to First Sale",
+          "description": "From idea to paying customer"
+        }
+      ]
+    },
+    "testimonials": {
+      "pill": "Case Studies",
+      "headline": {
+        "parts": [
+          { "text": "Smart entrepreneurs who " },
+          { "text": "validated first", "italic": true, "color": "blue" }
+        ]
+      },
+      "subheadline": "They could have spent months building. Instead, they spent days validating. Here's what happened.",
+      "items": [
+        {
+          "content": "Launched 4 different ideas in 2 months. Three failed fast. The fourth hit $8K MRR in 6 weeks. Without this template, I'd still be building the first failure.",
+          "author": {
+            "name": "Sarah Chen",
+            "role": "Serial Entrepreneur",
+            "company": "3 exits, 12 attempts",
+            "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person1.jpeg"
+          },
+          "rating": 5
+        },
+        {
+          "content": "Built an AI SaaS idea I was sure would work. Zero signups. Pivoted to a boring CRM feature. 47 paid users in month one. The market doesn't care about your assumptions.",
+          "author": {
+            "name": "Michael Rodriguez",
+            "role": "Former Google Engineer",
+            "company": "Now at $127K ARR",
+            "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person2.jpeg"
+          },
+          "rating": 5
+        },
+        {
+          "content": "My co-founder wanted to build for 6 months. I used this to launch in 3 days. When customers started paying immediately, he finally understood: validation before perfection.",
+          "author": {
+            "name": "Emily Johnson",
+            "role": "Technical Co-founder",
+            "company": "B2B SaaS, $2.3M raised",
+            "image": "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/lummi/person3.jpeg"
+          },
+          "rating": 5
+        }
+      ]
+    },
+    "logos": {
+      "title": "Everything's included, nothing to figure out",
+      "items": [
+        {
+          "name": "Vercel",
+          "url": "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+          "showName": true
+        },
+        {
+          "name": "Stripe",
+          "url": "https://images.ctfassets.net/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc492dfad34378d844280/Stripe_icon_-_square.svg?q=80&w=1082",
+          "showName": true
+        },
+        {
+          "name": "Prisma",
+          "url": "https://asset.brandfetch.io/idBBE3_R9e/idzL_5tH6B.jpg",
+          "showName": true
+        },
+        {
+          "name": "AWS",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+          "showName": false
+        },
+        {
+          "name": "Next.js",
+          "url": "https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png",
+          "showName": true
+        },
+        {
+          "name": "Tailwind CSS",
+          "url": "https://tailwindcss.com/_next/static/media/tailwindcss-logotype.a1069bda.svg",
+          "showName": false
+        }
+      ]
+    }
+  },
+  "pricing": {
+    "pill": "Get Started Free",
+    "headline": {
+      "parts": [
+        { "text": "Stop reading. " },
+        { "text": "Start doing.", "italic": true, "color": "primary" }
+      ]
+    },
+    "subheadline": "The code is free. Your time isn't. Every day you delay is a day your competitor gets ahead. Download now and launch by tomorrow.",
+    "plans": [
+      {
+        "name": "Just Start",
+        "price": "Free",
+        "period": "forever",
+        "description": "Everything you need to test your idea",
+        "features": [
+          "Complete source code",
+          "Launch in 24 hours",
+          "Accept real payments",
+          "Professional design",
+          "Make money immediately"
+        ],
+        "cta": { "text": "Download on GitHub", "href": "#" },
+        "popular": false
+      },
+      {
+        "name": "Get Help",
+        "price": "$99",
+        "period": "one-time",
+        "description": "When you need guidance",
+        "features": [
+          "Everything free",
+          "Video walkthrough",
+          "Launch checklist",
+          "Pricing strategies",
+          "First customer playbook",
+          "30-day support"
+        ],
+        "cta": { "text": "Fast Track Your Launch", "href": "#" },
+        "popular": true
+      },
+      {
+        "name": "Done For You",
+        "price": "$499",
+        "period": "per project",
+        "description": "We launch it for you",
+        "features": [
+          "We set everything up",
+          "Custom branding",
+          "Payment integration",
+          "Live in 48 hours",
+          "First month support",
+          "Focus 100% on sales"
+        ],
+        "cta": { "text": "Launch This Week", "href": "#" },
+        "popular": false
+      }
+    ]
+  },
+  "faq": {
+    "pill": "Straight Answers",
+    "headline": {
+      "parts": [
+        { "text": "Questions smart entrepreneurs " },
+        { "text": "always ask", "italic": true, "color": "blue" }
+      ]
+    },
+    "items": [
+      {
+        "question": "I'm not technical. Can I still use this?",
+        "answer": "Can you edit text in a document? Then yes. You'll change some words, add your pricing, and launch. If you get stuck, the $99 guide shows you exactly what to click. Most non-technical founders launch in 2-3 days."
+      },
+      {
+        "question": "What if my idea fails?",
+        "answer": "That's the point. Fail in 72 hours, not 72 weeks. The average entrepreneur wastes $50,000 and a year on ideas nobody wants. With this, you'll know in days. Failed fast? Good. Now test your next idea. Serial entrepreneurs average 7 failures before their big win."
+      },
+      {
+        "question": "Why not use Shopify or Gumroad?",
+        "answer": "Those are great for selling existing products. This is for testing new business ideas. You control everything, pay zero fees, and own your customer data. When your idea takes off, you're not locked into someone else's platform."
+      },
+      {
+        "question": "What kind of business can I test?",
+        "answer": "Any subscription service, digital product, or software tool. Coaching programs, AI tools, productivity apps, B2B services, online courses. If you can charge for it online, you can test it with this. Most successful tests are boring B2B tools, not sexy consumer apps."
+      },
+      {
+        "question": "What if I find paying customers?",
+        "answer": "Congratulations, you have a business. Keep serving them, listen to their feedback, and grow. This same system handles thousands of customers without breaking. When you need custom features, hire a developer. You'll know exactly what to build because customers told you."
+      },
+      {
+        "question": "How fast can I really launch?",
+        "answer": "Download today, launch tomorrow. Seriously. The longest part is deciding your price. Most people overthink it for days. Pick a number, launch, and adjust based on real feedback. Motion beats meditation every time."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Stop building. Start validating. The smart entrepreneur's toolkit for testing SaaS ideas before investing time and money.",
+    "sections": [
+      {
+        "title": "Product",
+        "links": [
+          { "name": "Features", "href": "#features" },
+          { "name": "Pricing", "href": "#pricing" },
+          { "name": "Documentation", "href": "#" },
+          { "name": "API Reference", "href": "#" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "name": "About Us", "href": "#about" },
+          { "name": "Blog", "href": "#" },
+          { "name": "Careers", "href": "#" },
+          { "name": "Contact", "href": "#contact" }
+        ]
+      },
+      {
+        "title": "Resources",
+        "links": [
+          { "name": "Help Center", "href": "#" },
+          { "name": "Community", "href": "#" },
+          { "name": "Templates", "href": "#" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          { "name": "Privacy Policy", "href": "#" },
+          { "name": "Terms of Service", "href": "#" },
+          { "name": "Cookie Policy", "href": "#" }
+        ]
+      }
+    ],
+    "social": [
+      { "name": "GitHub", "href": "https://github.com", "icon": "github" },
+      { "name": "Twitter", "href": "https://twitter.com", "icon": "twitter" },
+      { "name": "LinkedIn", "href": "https://linkedin.com", "icon": "linkedin" }
+    ],
+    "bottom": {
+      "copyright": "© {year} {brand}. All rights reserved.",
+      "links": [
+        { "name": "Privacy", "href": "#" },
+        { "name": "Terms", "href": "#" },
+        { "name": "Cookies", "href": "#" }
+      ]
+    }
+  }
+}
