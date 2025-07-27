@@ -45,7 +45,7 @@
       { "label": "Success Stories", "href": "#testimonials" }
     ],
     "cta": {
-      "primary": { "text": "Start Free", "href": "https://github.com/yourusername/fast-saas-template" },
+      "primary": { "text": "Start Free", "href": "https://github.com/kashbadami/fast-saas-template?tab=readme-ov-file#-quick-start" },
       "secondary": { "text": "Watch Demo", "href": "#demo" }
     }
   },

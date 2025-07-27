@@ -8,7 +8,7 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "build": "next build",
+    "build": "prisma generate && next build",
     "check": "next lint && tsc --noEmit",
     "db:generate": "prisma migrate dev",
     "db:migrate": "prisma migrate deploy",
@@ -21,7 +21,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
-    "start": "next start",
+    "start": "prisma migrate deploy && next start",
     "typecheck": "tsc --noEmit",
     "update-branding": "node scripts/update-branding.mjs"
   },

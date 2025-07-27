@@ -90,6 +90,11 @@ const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
+          <Link href="/auth/login" className="max-lg:hidden">
+            <Button variant="ghost" className="text-[#f97316] hover:text-[#f97316]/90 hover:bg-[#f97316]/10">
+              <span className="z-10 relative">Sign In</span>
+            </Button>
+          </Link>
           <Link href={navbar.cta.secondary.href} className="max-lg:hidden">
             <Button variant="outline">
               <span className="z-10 relative">{navbar.cta.secondary.text}</span>
@@ -204,6 +209,11 @@ const Navbar = () => {
         
         {/* Mobile Auth Buttons */}
         <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-border">
+          <Link href="/auth/login" onClick={() => setIsMenuOpen(false)}>
+            <Button variant="outline" className="w-full text-[#f97316] border-[#f97316]/30 hover:bg-[#f97316]/10">
+              Sign In
+            </Button>
+          </Link>
           <Link href={navbar.cta.secondary.href} onClick={() => setIsMenuOpen(false)}>
             <Button variant="outline" className="w-full">
               {navbar.cta.secondary.text}
