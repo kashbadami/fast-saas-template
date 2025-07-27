@@ -5,6 +5,7 @@ import { Features } from "~/components/features";
 import { SocialProof } from "~/components/social-proof";
 import { Pricing } from "~/components/pricing";
 import { FAQ } from "~/components/faq";
+import { FinalCta } from "~/components/final-cta";
 import { Footer } from "~/components/footer";
 
 export default function Home() {
@@ -24,6 +25,8 @@ export default function Home() {
         <Pricing />
 
         <FAQ />
+
+        <FinalCta />
       </main>
       
       <Footer />

@@ -521,5 +521,24 @@
         { "name": "Cookies", "href": "#" }
       ]
     }
+  },
+  "finalCta": {
+    "badge": "Get Started",
+    "headline": {
+      "parts": [
+        { "text": "Stop guessing.", "color": "primary" },
+        { "text": " Start validating.", "italic": true },
+        { "text": " Ship with confidence." }
+      ]
+    },
+    "description": "Join hundreds of entrepreneurs who've validated their ideas in 72 hours instead of wasting months on products nobody wants. Free to use, open source, and battle-tested.",
+    "primaryButton": {
+      "text": "Clone on GitHub",
+      "href": "https://github.com/kashbadami/fast-saas-template"
+    },
+    "secondaryButton": {
+      "text": "Read Documentation",
+      "href": "/docs"
+    }
   }
 }

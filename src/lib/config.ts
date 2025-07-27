@@ -117,6 +117,19 @@ export interface ContentConfig {
   pricing: any;
   faq: any;
   footer: any;
+  finalCta: {
+    badge: string;
+    headline: HeadlineConfig;
+    description: string;
+    primaryButton: {
+      text: string;
+      href: string;
+    };
+    secondaryButton: {
+      text: string;
+      href: string;
+    };
+  };
 }
 
 // Type definitions for branding configuration
