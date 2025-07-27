@@ -33,6 +33,31 @@ const config = {
         hostname: 'cdn.discordapp.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'assets.vercel.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'asset.brandfetch.io',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tailwindcss.com',
+        pathname: '/**',
+      },
     ],
   },
 };
