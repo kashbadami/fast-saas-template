@@ -100,7 +100,7 @@ const Navbar = () => {
               <span className="z-10 relative">{navbar.cta.secondary.text}</span>
             </Button>
           </Link>
-          <Link href={navbar.cta.primary.href}>
+          <Link href={navbar.cta.primary.href} target="_blank" rel="noopener noreferrer">
             <Button className="bg-[#f97316] hover:bg-[#f97316]/90">
               <span className="z-10 relative">{navbar.cta.primary.text}</span>
             </Button>
@@ -219,7 +219,7 @@ const Navbar = () => {
               {navbar.cta.secondary.text}
             </Button>
           </Link>
-          <Link href={navbar.cta.primary.href} onClick={() => setIsMenuOpen(false)}>
+          <Link href={navbar.cta.primary.href} target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
             <Button className="bg-[#f97316] hover:bg-[#f97316]/90 w-full">
               {navbar.cta.primary.text}
             </Button>

@@ -534,7 +534,7 @@
     "description": "Join hundreds of entrepreneurs who've validated their ideas in 72 hours instead of wasting months on products nobody wants. Free to use, open source, and battle-tested.",
     "primaryButton": {
       "text": "Clone on GitHub",
-      "href": "https://github.com/kashbadami/fast-saas-template"
+      "href": "https://github.com/kashbadami/fast-saas-template?tab=readme-ov-file#-quick-start"
     },
     "secondaryButton": {
       "text": "Read Documentation",
