@@ -21,7 +21,9 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
-    "start": "prisma migrate deploy && next start",
+    "start": "prisma db push && next start",
+    "start:prod": "next start",
+    "start:migrate": "prisma migrate deploy && next start",
     "typecheck": "tsc --noEmit",
     "update-branding": "node scripts/update-branding.mjs"
   },
