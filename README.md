@@ -3,9 +3,9 @@
 > **90% of startups fail because they build products nobody wants to buy.** Smart entrepreneurs test demand first. This template lets you launch a real product in 72 hours and discover if customers will actually pay—before you quit your job, raise money, or waste months building.
 
 <p align="center">
-  <a href="https://github.com/yourusername/fast-saas-template/stargazers"><img src="https://img.shields.io/github/stars/yourusername/fast-saas-template?style=flat-square&logo=github&color=f97316" alt="GitHub stars"></a>
-  <a href="https://github.com/yourusername/fast-saas-template/network/members"><img src="https://img.shields.io/github/forks/yourusername/fast-saas-template?style=flat-square&logo=github&color=1e40af" alt="GitHub forks"></a>
-  <a href="https://github.com/yourusername/fast-saas-template/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"></a>
+  <a href="https://github.com/kashbadami/fast-saas-template/stargazers"><img src="https://img.shields.io/github/stars/kashbadami/fast-saas-template?style=flat-square&logo=github&color=f97316" alt="GitHub stars"></a>
+  <a href="https://github.com/kashbadami/fast-saas-template/network/members"><img src="https://img.shields.io/github/forks/kashbadami/fast-saas-template?style=flat-square&logo=github&color=1e40af" alt="GitHub forks"></a>
+  <a href="https://github.com/kashbadami/fast-saas-template/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License"></a>
   <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js" alt="Next.js"></a>
   <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.3-blue?style=flat-square&logo=typescript" alt="TypeScript"></a>
 </p>
@@ -92,10 +92,30 @@ Building a SaaS product is risky. You could spend months perfecting features onl
 
 ## 🚀 Quick Start
 
+### One-Line Setup
+
+```bash
+npx degit kashbadami/fast-saas-template my-saas && cd my-saas && npm install && cp .env.example .env && git init && git add -A && git commit -m "Initial commit"
+```
+
+### Interactive Setup (Coming Soon)
+
+```bash
+npx create-fast-saas my-saas
+```
+
+### Manual Setup
+
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fast-saas-template.git my-saas
+git clone https://github.com/kashbadami/fast-saas-template.git my-saas
 cd my-saas
+
+# Remove existing git history
+rm -rf .git
+
+# Initialize new git repository
+git init
 
 # Install dependencies
 npm install
@@ -107,11 +127,23 @@ cp .env.example .env
 # Set up database
 npm run db:push
 
+# Create initial commit
+git add -A
+git commit -m "Initial commit from fast-saas-template"
+
 # Start development server
 npm run dev
 ```
 
 Your app is now running at [http://localhost:3000](http://localhost:3000) 🎉
+
+### Deploy to GitHub
+
+```bash
+# Create a new repository on GitHub, then:
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
+```
 
 ## 🛠️ Tech Stack
 

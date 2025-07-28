@@ -1,0 +1,31 @@
+{
+  "name": "create-fast-saas",
+  "version": "1.0.0",
+  "description": "Create a new Fast SaaS app",
+  "type": "module",
+  "bin": {
+    "create-fast-saas": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "degit": "^2.8.4"
+  },
+  "keywords": [
+    "fast-saas",
+    "saas",
+    "template",
+    "nextjs",
+    "create-app"
+  ],
+  "author": "Fast SaaS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kashbadami/fast-saas-template.git"
+  }
+}
